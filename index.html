@@ -5,20 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>test</title>
     <script>
     function myFunction() {
   document.getElementById("demo").innerHTML = "Answer!";
 }
+function clickHandle(){
+    document.getElementById("like").style.color='red';
+    document.getElementById("like").style.borderColor='red';
+
+}
     </script>
 </head>
 <body>
     <h1>Flash Cards</h1>
+    <div class="Nav">
+        <button class="prev" onclick="HandlePrev()" id="prev"> 
+           <i class="fa fa-arrow-left fa-lg"></i>  
+        </button>
+        <button class="next" onclick="HandleNext()" id="next"> 
+            <i class="fa fa-arrow-right fa-lg"></i>  
+         </button>
+
+    </div>
 <div class="outer">
     <div id ="demo" class="card">
     <div class="front"><p>Questions</p></div>
     <div class="back"><p>Answers!</p></div>
-    </div>
+</div>
+
+<div class="likediv">
+    <button class="like" onclick="clickHandle()" id="like"> 
+        <i class="fa fa-heart fa_custom" ></i> Like 
+    </button>
 </div>
 </body>
 </html>
